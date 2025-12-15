@@ -1,6 +1,8 @@
-package Model;
+package com.customerhub.api.Model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -9,7 +11,9 @@ import lombok.Data;
 @Table (name = "cliente")
 public class Cliente {
 
-    private Long id;
+    @Id
+    @GeneratedValue
+    private Integer id;
     private String nome;
     private String email;
     private String telefone;
